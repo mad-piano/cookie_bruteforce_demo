@@ -1,0 +1,9 @@
+Vunl: Can bruteforce session ID'S eaisly because of how predictable it is (only 5 nums long)
+doesn't assign session_id cookie to the IP, no captchas or IP monitioring. Allows an attacker
+to bypass the amount of attempts, possibly to over 10,000,000 attempts.
+
+Fixes: Only gen a session_id cookie when an IP connects, not genrically. Add captchas,
+add delays in recieving login attempts.
+
+Code: Expliots bruteforcing valid session_id cookies to bypass lockouts and bruteforce 
+account login attempts
